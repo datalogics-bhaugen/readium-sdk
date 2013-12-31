@@ -80,10 +80,10 @@ echo ""
 
 case "$COMMAND" in
     "build")
-        $NDK_PATH/ndk-build -j9 -C . V=1 NDK_APPLICATION_MK=Application.mk NDK_PROJECT_PATH="$PROJECT_PATH" APP_BUILD_SCRIPT=Android.mk
+        $NDK_PATH/ndk-build -B -j9 -C . V=1 NDK_APPLICATION_MK=Application.mk NDK_PROJECT_PATH="$PROJECT_PATH" APP_BUILD_SCRIPT=Android.mk
         ;;
     "build-debug")
-        $NDK_PATH/ndk-build -j9 -C . V=1 NDK_APPLICATION_MK=Application.mk NDK_PROJECT_PATH="$PROJECT_PATH" APP_BUILD_SCRIPT=Android.mk NDK_DEBUG=1
+        $NDK_PATH/ndk-build -B -j9 -C . V=1 NDK_APPLICATION_MK=Application.mk NDK_PROJECT_PATH="$PROJECT_PATH" APP_BUILD_SCRIPT=Android.mk NDK_DEBUG=1
         ;;
     "clean")
         $NDK_PATH/ndk-build clean -j9 -C . V=1 NDK_APPLICATION_MK=Application.mk NDK_PROJECT_PATH="$PROJECT_PATH" APP_BUILD_SCRIPT=Android.mk

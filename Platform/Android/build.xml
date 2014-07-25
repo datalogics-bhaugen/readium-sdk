@@ -73,7 +73,7 @@
         </exec>
     </target>
 
-    <!-- After Readium SDK has been built for Android, built the documentation -->
+    <!-- After Readium SDK has been built for Android, build the documentation -->
     <target name="-post-build" >
         <ant dir="../../api-docs/" antfile="build.xml" />
     </target>

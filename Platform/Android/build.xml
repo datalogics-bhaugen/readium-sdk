@@ -67,7 +67,11 @@
             -pre-clean
     -->
     <target name="-pre-compile" >
-        <exec executable="sh">
+        <exec executable="sh" failonerror="true">
+            <arg value="ndk-compile.sh" />
+            <arg value="build-debug" />
+        </exec>
+        <exec executable="sh" failonerror="true">
             <arg value="ndk-compile.sh" />
             <arg value="build" />
         </exec>
